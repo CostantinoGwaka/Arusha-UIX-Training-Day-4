@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.btn-custom{
+    @apply bg-blue-700 animate-bounce w-50 text-white p-2 hover:bg-blue-900 m-2 rounded-3xl border-black border-2 float-right
+}
+
+.card{
+    @apply bg-white shadow-lg rounded-lg p-4 m-2 border border-gray-300 text-center text-shadow-lime-700 h-40
+}
