@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstrap downloaded</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function () {
+          alert("Button clicked!");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Bootstrap Navbar/Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MySite</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-7" style="background-color: rgb(70, 70, 46); color: white;">
+          1 of 2
+        </div>
+        <div class="col-5" style="background-color: rgb(199, 199, 29); color: black;">
+          2 of 2
+        </div>
+      </div>
+      <div class="row" style="background-color: yellow;">
+        <div class="col" style="background-color: yellow;">
+          1 of 3
+        </div>
+        <div class="col" style="background-color: rgb(59, 59, 8);">
+          2 of 3
+        </div>
+        <div class="col" style="background-color: rgb(59, 59, 8);">
+          3 of 3
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="row" style="background-color: rgb(191, 208, 218);">
+        <div class="col-4" style="background-color: rgb(173, 233, 167);">
+          1 of 3
+        </div>
+        <div class="col-4" style="background-color: rgb(177, 167, 233);">
+          2 of 3 (wider)
+        </div>
+        <div class="col-4" style="background-color: rgb(173, 233, 167);">
+          3 of 3
+        </div>
+      </div>
+      <div class="row" style="background-color: rgb(191, 208, 218);">
+        <div class="col" style="background-color: rgb(167, 172, 233);">
+          1 of 3
+        </div>
+        <div class="col-9" style="background-color: rgb(173, 233, 167);">
+          2 of 3 (wider)
+        </div>
+        <div class="col" style="background-color: rgb(192, 167, 233);">
+          3 of 3
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+      <div class="row">
+        <div class="col-md-8" style="background-color: rgb(192, 167, 233);">.col-md-8</div>
+        <div class="col-6 col-md-4" style="background-color: rgb(167, 233, 200);">
+          .col-6 .col-md-4
+        </div>
+      </div>
+
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+      <div class="row">
+        <div class="col-6 col-md-4" style="background-color: rgb(192, 167, 233);">
+          .col-6 .col-md-4
+        </div>
+        <div class="col-6 col-md-4" style="background-color: rgb(233, 167, 211);">
+          .col-6 .col-md-4
+        </div>
+        <div class="col-6 col-md-4" style="background-color: rgb(245, 247, 137);">
+          .col-6 .col-md-4
+        </div>
+      </div>
+
+      <!-- Columns are always 50% wide, on mobile and desktop -->
+      <div class="row">
+        <div class="col-6" style="background-color: rgb(167, 220, 233);">.col-6</div>
+        <div class="col-6" style="background-color: rgb(141, 235, 183);">.col-6</div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="myButton">Primary</button>
+
+    <!-- <script>
+      document.getElementById("myButton").addEventListener("click", function () {
+        alert("Button clicked!");
+      });
+    </script> -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
