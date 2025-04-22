@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Accessibility</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 90vh;">
+      <div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+        <form action="#" method="POST" id="myform">
+          <fieldset>
+            <legend>Customer Information</legend>
+            <label for="fname">Name:</label><br />
+            <input type="text" class="form-control" id="fname" name="fname" /><br />
+
+            <div id="errorfname" style="color: red; margin-bottom: 10px;"></div>
+
+            <label for="email">Email:</label><br />
+            <input type="email" class="form-control" id="email" name="email" required /><br />
+
+            <label for="date">Date of Birth:</label><br />
+            <input type="date" class="form-control" id="date" name="dob" required /><br />
+
+            <label for="message">Bio:</label><br />
+            <textarea id="message" class="form-control" name="message" rows="4" required></textarea
+            ><br />
+
+            <label for="password">Password:</label><br />
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              required
+            /><br />
+
+            <label for="cpassword">Confirm Password:</label><br />
+            <input
+              type="password"
+              class="form-control"
+              id="cpassword"
+              name="cpassword"
+              required
+            /><br />
+
+            <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
+
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.getElementById("myform").addEventListener("submit", validateData);
+
+    function validateData(event) {
+      event.preventDefault(); // Prevent form submission
+
+      let empName = document.getElementById("fname");
+      let errorfname = document.getElementById("errorfname");
+      let errorMessages = [];
+
+      // Reset styles and messages
+      empName.style.borderColor = "initial";
+      errorfname.innerHTML = "";
+
+      if (empName.value.trim() === "") {
+        empName.style.borderColor = "red";
+        errorMessages.push("Name cannot be empty.");
+        // alert("Please enter your name.");
+      }
+
+      let password = document.getElementById("password");
+      let cpassword = document.getElementById("cpassword");
+      let passwordError = document.getElementById("passwordError");
+      let passwordErrorMessage = [];
+
+      // Reset styles and messages
+      password.style.borderColor = "initial";
+      cpassword.style.borderColor = "initial";
+      passwordError.innerHTML = "";
+
+      if (password.value.trim() != cpassword.value.trim()) {
+        password.style.borderColor = "red";
+        cpassword.style.borderColor = "red";
+        passwordErrorMessage.push("Password not match.");
+        // alert("Please enter your name.");
+      }
+
+      if (errorMessages.length > 0) {
+        errorfname.innerHTML = `
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <div>${errorMessages.join("<br>")}</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        `;
+      } else if (passwordErrorMessage.length > 0) {
+        passwordError.innerHTML = `
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <div>${passwordErrorMessage.join("<br/>")}</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        `;
+      } else {
+        // Submit the form manually if no error
+        document.getElementById("myform").submit();
+        alert("Form submitted successfully!");
+      }
+    }
+  </script>
+</html>
