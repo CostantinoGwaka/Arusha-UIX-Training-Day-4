@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Loader</title>
+  </head>
+  <body>
+    <div class="loader-container">
+      <h1 class="loader-text">
+        Loading <span class="dot">N</span><span class="dot">e</span><span class="dot">S</span
+        ><span class="dot">T</span>...
+      </h1>
+    </div>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .loader-container {
+        text-align: center;
+      }
+
+      .loader-text {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 4px;
+        display: inline-block;
+      }
+
+      .dot {
+        display: inline-block;
+        animation: bounce 1s infinite ease-in-out;
+      }
+
+      .dot:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      .dot:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </body>
+</html>

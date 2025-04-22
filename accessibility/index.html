@@ -10,6 +10,60 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+      }
+
+      .spinner {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        margin: 5px auto;
+        border-radius: 50%; /* Make it circular */
+        width: 40px;
+        height: 40px;
+      }
+
+      .spin {
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
   </head>
   <body>
     <div style="display: flex; justify-content: center; align-items: center; height: 90vh;">
@@ -51,6 +105,15 @@
             /><br />
 
             <div id="passwordError" style="color: red; margin-bottom: 10px;"></div>
+
+            <div
+              id="loaderWrapper"
+              style="display: none; flex-direction: column; align-items: center;"
+            >
+              <div class="spinner-container">
+                <div id="spinner" class="spinner"></div>
+              </div>
+            </div>
 
             <button type="submit" class="btn btn-primary" id="submitBtn">
               Submit
@@ -114,8 +177,14 @@
         `;
       } else {
         // Submit the form manually if no error
-        document.getElementById("myform").submit();
-        alert("Form submitted successfully!");
+        document.getElementById("loaderWrapper").style.display = "flex";
+        document.getElementById("spinner").classList.add("spin");
+        document.getElementById("submitBtn").style.display = "none";
+
+        setTimeout(() => {
+          document.getElementById("myform").submit();
+          alert("Form submitted successfully!");
+        }, 4000);
       }
     }
   </script>
