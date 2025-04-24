@@ -1,0 +1,160 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+Welcome to our video on web development basics.
+
+00:00:03.000 --> 00:00:07.000
+In this video you will learn about how captions help in accessibility.
+
+00:00:07.000 --> 00:00:11.000
+We will begin with adding captions to a video.
+
+00:00:11.000 --> 00:00:15.000
+Captions provide a text version of the spoken content in videos.
+
+00:00:15.000 --> 00:00:19.000
+They help users who are deaf or hard of hearing.
+
+00:00:19.000 --> 00:00:23.000
+Let’s take a look at how to write a simple VTT file.
+
+00:00:23.000 --> 00:00:28.000
+Each caption starts with a time range, followed by the text.
+
+00:00:28.000 --> 00:00:33.000
+WEBVTT files must start with the header “WEBVTT”.
+
+00:00:33.000 --> 00:00:37.000
+You can add subtitles line by line with time codes.
+
+00:00:37.000 --> 00:00:42.000
+Now let's look at how to include the track in HTML.
+
+00:00:42.000 --> 00:00:47.000
+You use the <track> tag inside the <video> element.
+
+00:00:47.000 --> 00:00:51.000
+Be sure to specify the kind, srclang, and label attributes.
+
+00:00:51.000 --> 00:00:56.000
+You should also use the 'default' attribute to auto-load captions.
+
+00:00:56.000 --> 00:01:02.000
+If your captions are not showing, check that the file path is correct.
+
+00:01:02.000 --> 00:01:07.000
+Also check that your web server supports the .vtt MIME type.
+
+00:01:07.000 --> 00:01:11.000
+Modern browsers support caption tracks well.
+
+00:01:11.000 --> 00:01:16.000
+But users may need to manually enable subtitles.
+
+00:01:16.000 --> 00:01:22.000
+Now let’s explore how captions can enhance the learning experience.
+
+00:01:22.000 --> 00:01:27.000
+They make content more accessible and easier to follow.
+
+00:01:27.000 --> 00:01:33.000
+Captions are also useful in noisy or sound-sensitive environments.
+
+00:01:33.000 --> 00:01:38.000
+They support better comprehension for non-native speakers.
+
+00:01:38.000 --> 00:01:42.000
+In web development, accessibility should always be a priority.
+
+00:01:42.000 --> 00:01:48.000
+It’s not just about compliance, it’s about inclusion.
+
+00:01:48.000 --> 00:01:52.000
+Let’s wrap up this section with a quick summary.
+
+00:01:52.000 --> 00:01:57.000
+Captions improve accessibility and user experience.
+
+00:01:57.000 --> 00:02:02.000
+Using captions is a best practice for all video content.
+
+00:02:02.000 --> 00:02:08.000
+Now, let’s continue with more web development basics.
+
+00:02:08.000 --> 00:02:14.000
+In the next section, we’ll cover semantic HTML elements.
+
+00:02:14.000 --> 00:02:20.000
+These elements help define the structure and meaning of content.
+
+00:02:20.000 --> 00:02:25.000
+Examples include <header>, <main>, <section>, and <footer>.
+
+00:02:25.000 --> 00:02:31.000
+Using semantic tags improves accessibility and SEO.
+
+00:02:31.000 --> 00:02:36.000
+It also helps developers understand the layout of a page quickly.
+
+00:02:36.000 --> 00:02:42.000
+Now let’s see these elements in action with some code examples.
+
+00:02:42.000 --> 00:02:47.000
+We’ll build a simple HTML page using semantic tags.
+
+00:02:47.000 --> 00:02:53.000
+Start with <header> for the top section of the page.
+
+00:02:53.000 --> 00:02:58.000
+Next, use <main> for the core content of the page.
+
+00:02:58.000 --> 00:03:03.000
+Inside <main>, include <section> to organize related content.
+
+00:03:03.000 --> 00:03:08.000
+Wrap up the page with a <footer> at the bottom.
+
+00:03:08.000 --> 00:03:14.000
+Semantic HTML helps screen readers interpret content properly.
+
+00:03:14.000 --> 00:03:19.000
+It also improves collaboration among team members.
+
+00:03:19.000 --> 00:03:24.000
+That's the power of well-structured HTML.
+
+00:03:24.000 --> 00:03:29.000
+Next, we’ll discuss how to style semantic elements using CSS.
+
+00:03:29.000 --> 00:03:34.000
+We’ll apply styles to create a visually appealing layout.
+
+00:03:34.000 --> 00:03:39.000
+Remember to keep your CSS modular and organized.
+
+00:03:39.000 --> 00:03:44.000
+Use classes and IDs where necessary to avoid conflicts.
+
+00:03:44.000 --> 00:03:50.000
+Use comments in CSS to explain complex rules.
+
+00:03:50.000 --> 00:03:56.000
+CSS also plays a key role in responsive web design.
+
+00:03:56.000 --> 00:04:01.000
+We’ll introduce media queries in the next lesson.
+
+00:04:01.000 --> 00:04:07.000
+That’s all for this introductory segment on HTML and captions.
+
+00:04:07.000 --> 00:04:12.000
+In the next part, we’ll cover layout techniques with Flexbox.
+
+00:04:12.000 --> 00:04:17.000
+Stay tuned and let’s build some responsive designs together!
+
+00:04:17.000 --> 00:04:22.000
+Thanks for watching this part—let’s continue learning!
+
+00:04:22.000 --> 00:05:00.000
+[Background music playing, no narration]

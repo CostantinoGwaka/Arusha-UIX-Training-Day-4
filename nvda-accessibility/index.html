@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 tabindex="0">Accessibile Rich Internet Application</h2>
+    <button aria-label="Close">X</button>
+    <button aria-label="Search Button">🔍</button>
+
+    <h2 id="section-title">Personal Information</h2>
+    <p id="last-desc">Please enter your full last name</p>
+    <input
+      type="text"
+      id="lname"
+      aria-describedby="last-desc"
+      aria-label="section-title"
+      placeholder="Last Name"
+    />
+
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
